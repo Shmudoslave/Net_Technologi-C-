@@ -9,14 +9,14 @@
 
 int main()
 {
-    const char* ips[] = {"8.8.8.8", "142.250.185.46"};
+    const char* ips[] = {"8.8.8.8", "142.250.185.46", "9.9.9.9"};
     int ports[] = {80, 443, 53};
     
     struct sockaddr_in server_addr;
     memset(&server_addr, 0, sizeof(server_addr));
     server_addr.sin_family = AF_INET;
 
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
         {
